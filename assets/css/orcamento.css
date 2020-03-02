@@ -1,0 +1,194 @@
+/*******************************
+* ORCAMENTO InoveGás 
+*******************************/
+h1{
+  margin-bottom: 60px;
+}
+#orcamento{
+  position: relative;
+  height: auto;
+  padding-bottom: 30px;
+}
+@media(max-width:767px){
+  #orcamento .titulo{
+    font-size: 18px;
+  }
+}
+#orcamento .titulo{
+  margin-top: 0;
+  margin-bottom: 20px;  
+}
+#orcamento.mini .dados-loja{
+  display: none;
+}
+.bg-orcamento #orcamento .titulo{
+  color: #fff;
+}
+.home .logo a{
+  display: inline-block;
+}
+.home #orcamento .titulo{
+  margin-top: 40px;
+}
+.bg-orcamento #orcamento .lead,
+.bg-orcamento #orcamento h2{
+  color: #fff;
+}
+.d-none{
+  display: none !important;
+}
+.txt-uppercase{
+  text-transform: uppercase;
+}
+.solicitacao-realizada:before{
+  content:'';
+  display:block;
+  width:82px;
+  height:82px;
+  border-radius:100%;
+  margin: 8px auto;
+  background-size: 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTIwMCIgaGVpZ2h0PSIxMjAwIiB2aWV3Qm94PSIwIDAgMTIwMCAxMjAwIj48Zz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MDAgNjAwKSBzY2FsZSgwLjY5IDAuNjkpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoLTYwMCAtNjAwKSIgc3R5bGU9ImZpbGw6I2Y3ODIyMCI+PHN2ZyBmaWxsPSIjZjc4MjIwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOTAgOTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDkwIDkwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTU3LjUzNjU5ODIsMzEuODUwNTk5M0M1Mi4yMjk1OTksMzguMDMxMjAwNCw0Ni45MjI3MDI4LDQ0LjIxMjAwMTgsNDEuNjE1Njk5OCw1MC4zOTI2MDEgICBjLTIuNzE1NDk5OS0yLjg3NTQ5OTctNS40MzEwOTg5LTUuNzUxMTAyNC04LjE0Njc5NzItOC42MjY2MDIyYy0zLjMyMDgwMDgtMy41MTYzOTk0LTguNjE3NTAwMywxLjc5Mzg5OTUtNS4zMDMyMDE3LDUuMzAzMzAyOCAgIGMzLjY0MTQwMTMsMy44NTU5OTksNy4yODI5OTksNy43MTE4OTg4LDEwLjkyNDUwMTQsMTEuNTY3OTk3YzEuMzE1MDk3OCwxLjM5MjYwMSw0LjAwNzkwMDIsMS41MDg1MDMsNS4zMDMxOTk4LDAgICBjNi4xNDg3OTk5LTcuMTYxMTk3NywxMi4yOTc1OTYtMTQuMzIyMTk3LDE4LjQ0NjM5NTktMjEuNDgzMzk4NCAgIEM2NS45Njg4OTUsMzMuNTA5NzAwOCw2MC42ODczMDE2LDI4LjE4MTEwMDgsNTcuNTM2NTk4MiwzMS44NTA1OTkzeiI+PC9wYXRoPjxwYXRoIGQ9Ik00NC45OTk4MDE2LDkuNjk1MzAwMUMyNS41MzMwMDA5LDkuNjk1MzAwMSw5LjY5NTYwMTUsMjUuNTMyNjk5Niw5LjY5NTYwMTUsNDUgICBzMTUuODM3Mzk5NSwzNS4zMDQ3MDI4LDM1LjMwNDE5OTIsMzUuMzA0NzAyOGMxOS40NjcxOTM2LDAsMzUuMzA0NTk1OS0xNS44Mzc0MDIzLDM1LjMwNDU5NTktMzUuMzA0NzAyOCAgIFM2NC40NjY5OTUyLDkuNjk1MzAwMSw0NC45OTk4MDE2LDkuNjk1MzAwMXogTTQ0Ljk5OTgwMTYsNzIuMzA0NzAyOGMtMTUuMDU1NzAwMywwLTI3LjMwNDE5OTItMTIuMjQ5MDA0NC0yNy4zMDQxOTkyLTI3LjMwNDcwMjggICBzMTIuMjQ4NDk4OS0yNy4zMDQ3MDA5LDI3LjMwNDE5OTItMjcuMzA0NzAwOWMxNS4wNTU1OTU0LDAsMjcuMzA0NTk1OSwxMi4yNDkwMDA1LDI3LjMwNDU5NTksMjcuMzA0NzAwOSAgIFM2MC4wNTUzOTcsNzIuMzA0NzAyOCw0NC45OTk4MDE2LDcyLjMwNDcwMjh6Ij48L3BhdGg+PC9nPjwvc3ZnPjwvZz48L2c+PC9zdmc+");
+}
+
+ /* Customize the label (the container) */
+ 
+.pedido-orcamento{
+  text-align: center;
+}
+.bg-orcamento .pedido-orcamento>p{      
+  color: #fff;
+}
+.pedido-orcamento p.texto{
+  max-width: 280px;
+  margin: 0 auto 20px auto;
+  font-size: 16px;
+  height: auto;
+  padding: 12px;
+}
+.pedido-orcamento input,
+.pedido-orcamento select,
+.pedido-orcamento option{
+  text-align: center;
+}
+
+.pedido-orcamento .radio-inline{
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;  
+  font-size: 18px;
+}
+.bg-orcamento .pedido-orcamento .radio-inline{
+  color: #fff;
+}
+.pedido-orcamento .radio-inline input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}   
+.pedido-orcamento .radio-inline .checkmark{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: solid 2px #fff;
+  border-radius: 50%;
+}
+#orcamento.mini .pedido-orcamento .radio-inline .checkmark{
+  background-color: #777;
+  border: solid 2px #777;
+}
+/* On mouse-over, add a grey background color */
+.pedido-orcamento .radio-inline .checkmark:hover input ~ .checkmark {
+  background-color: #ccc;
+} 
+/* When the radio button is checked, add a blue background */
+.pedido-orcamento .radio-inline input:checked ~ .checkmark {
+  background-color: #2196F3;
+}   
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.pedido-orcamento .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.pedido-orcamento .radio-inline input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.pedido-orcamento .radio-inline .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.pedido-orcamento .grupo-oculto{
+  display: none;
+}
+
+.solicitacao-realizada{  
+  text-align: center;
+}
+.bg-orcamento #orcamento{
+  color: #fff;
+}
+#orcamento{
+  position: relative;
+  z-index: 1;
+}
+#ajax-loading{
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: block;
+}
+.loader{
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  top: calc(50% - 32px);
+}
+
+/* cor do ícone de loading */
+#ajax-loading svg path,
+#ajax-loading svg rect{
+  fill: #FF6700;
+}
+#ajax-error{
+  text-align: center;  
+}
+#ajax-error p{
+  padding: 10px 15px;
+  margin: 15px auto;
+  max-width: 360px;
+  color: red;
+  background: rgba(255,60,60,.6);
+}
+#passo4 .dados-loja{
+  text-align: center;
+  color: #fff;
+  margin: 30px auto;
+  max-width: 360px;
+  background: rgba(0,0,0,.35);
+  padding: 5px 15px 15px 15px;
+}

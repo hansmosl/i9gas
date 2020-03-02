@@ -1,0 +1,1068 @@
+// ==========================================================================
+// TABLE OF CONTENTS:
+// ==========================================================================
+//
+// # Header
+// 		# Title + description
+// 		# Navbar
+// # Wrapper
+// # Content
+// # Sidebar and Widgets
+// # Components
+// 		# Fancy skip link
+// 		# Pagination
+// 		# Comments
+// # Footer
+//
+
+body{
+	background:url(../images/bg-textura.png);	
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+// ==========================================================================
+// Header
+// ==========================================================================
+#header {
+	.page-header{
+		padding:0;
+		margin:0;
+		border:0;
+		background-size:cover;
+		background-repeat:no-repeat;
+		.site-title{
+			text-align:center;
+			margin:30px 0;
+		}		
+	}
+	#main-navigation{
+		width: 150px;
+		top:20px;
+		right:0;
+		position:fixed;
+		z-index:999;
+		button{
+			position:relative;
+			right: 0;
+			margin-bottom: 5px;
+			border: 0;
+			border-radius: 50px 0 0 50px;
+			font-size: 18px;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #fff;
+			padding: 15px 0 15px 7px;
+			width: 150px;
+			height: 100px;
+			.glyphicon{
+				font-size:48px;
+			}
+		}
+		.menu-fixo{
+			background:$brand-primary;
+		}
+		.orcamento{
+			background:$brand-success;
+		}
+	}
+}
+
+@media(max-width:$screen-xs-max){
+	.container{
+		padding-left:30px;
+		padding-right:30px;
+	}
+	#header{
+		#main-navigation{
+			width: 30px;
+			button{
+				width: 30px;
+				height: 40px;
+        padding: 0 0 0 5px;
+				.glyphicon{
+					font-size: 21px;
+				}
+			}
+		}
+	}
+  #footer .list-inline li{
+    display: block;
+  }
+}
+
+.modal.menu{
+	background: rgba(0,0,0,0.7);
+	.modal-content{
+		background:transparent;
+		text-align:center;
+		box-shadow:none;
+		border:0;
+		.close{
+			background:$brand-primary;
+			padding:10px 13px;
+			color:#fff;
+			opacity:1;
+			float:none;
+			margin-bottom: 20px;
+			
+		}
+		.menu{
+			list-style:none;
+			padding-left:0;			
+			text-transform:uppercase;
+			font-size:24px;
+			li{margin-bottom:15px;}
+			a{
+				color:#fff;
+				font-weight:bold;
+			}
+			.destaque{
+				color:$brand-primary;
+			}
+		}
+	}
+}
+.page.page-id-8{
+	background:url(../images/bg-orcamento.jpg) no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	#content{
+		label,
+		h1,h2,p{
+			color:#fff;
+		}
+	}
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// ==========================================================================
+// SECTIONS
+// ==========================================================================
+
+.titulo{
+	text-align:center;
+	font-size:$font-size-h1;
+	position:relative;
+	padding-top:30px;
+	margin:60px 0 40px 0;
+	&:before{
+		content:'';
+		display:block;
+		width:120px;
+		border:solid 2px $brand-primary;
+		position: absolute;
+		top:0;
+		left:calc(50% - 50px);
+	}
+	&.esquerda{
+		text-align:left;
+		&:before{		
+			left: 0;
+		}		
+	}
+	&.direita{
+		text-align:right;
+		&:before{
+			right: 0;
+			left:inherit;
+		}		
+	}
+}
+section .descricao{
+	color:$gray-dark;
+}
+
+// ==========================================================================
+// Section Nossas Lojas
+// ==========================================================================
+
+// ==========================================================================
+// Section Calculadora
+// ==========================================================================
+
+section.calculadora{
+	background: url(../images/bg-calculadora.png) no-repeat;
+	background-size:cover;
+	padding-bottom:40px;
+	h3{
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+	output{
+		display:inline-block;
+		font-size:$font-size-h3;
+		color: $brand-primary;
+		font-weight:bold;
+	}
+	.lead.destaque{
+		font-size:$font-size-h3;
+		font-weight:normal;
+	}
+	.well{
+		background:rgba(255,255,255,.5);
+		border:0;
+	}
+	
+	@media(min-width: $screen-sm-min){
+		.borda{
+			>div{
+				padding-right:30px;
+			}
+			>div+div{
+				padding-left:30px;
+				padding-right:15px;
+				border-left: solid 1px #000;
+			}
+		}
+	}
+	
+} //section.calculadora
+
+// ==========================================================================
+// Section Vantagens do GNV
+// ==========================================================================
+
+.icone{
+	width:150px;
+	height:150px;
+	background-repeat:no-repeat;
+	background-size:contain;
+	display: block;
+	margin:0 auto;
+	&.icone-p{
+		width:36px;
+		height:36px;
+	}
+}
+.icone-seguranca{background-image: url(../images/icone-seguranca.png);}
+.icone-ecologia{background-image: url(../images/icone-ecologia.png);}
+.icone-economia{background-image: url(../images/icone-economia.png);}
+.icone-desempenho{background-image: url(../images/icone-desempenho.png);}
+.icone-vantagens-p{background-image:url(../images/icone-vantagens-p.png);}
+.icone-perguntas-p{background-image:url(../images/icone-perguntas-p.png);}
+.icone-seguranca-p{background-image:url(../images/icone-seguranca-p.png);}
+
+section.vantagens-gnv{
+	.lista-vantagens{
+		margin-top:20px;
+		margin-bottom:30px;
+		>div{
+			color:#fff;
+			text-align:center;
+			padding:30px;
+			min-height:250px;
+		}
+		>div:nth-child(1){background-color:#D1882F;}
+		>div:nth-child(2){background-color:#D17A00;}
+		>div:nth-child(3){background-color:#CA6514;}
+		>div:nth-child(4){background-color:#BF5A00;}
+	}
+}
+
+// ==========================================================================
+// Section Orçamento
+// ==========================================================================
+
+.bg-orcamento{
+  background: $brand-success url(../images/bg-orcamento.png) no-repeat;
+  background-size:cover;  
+  
+  form{	
+		label{
+			color:#fff;
+		}
+  }
+  
+}
+
+#orcamento{
+  position: relative;
+  min-height: 100vh;
+  &.mini{
+    min-height: auto;
+  }  
+  .wpcf7-form{
+    text-align: center;
+  }
+  
+	form{
+		margin: 30px auto;
+		max-width:600px;
+		.wpcf7-submit{
+			background:$brand-primary;			
+			font-size:22px;
+			border:0;
+			font-weight:bold;
+			padding:10px 30px;
+			color:#fff;
+		}
+		.ajax-loader{display:block;}
+	}
+  
+}
+
+.cta-navegacao{
+	padding:30px 0;
+}
+
+
+
+// ==========================================================================
+// Section Onde Abastecer
+// ==========================================================================
+
+section.onde-abastecer{
+	background:$gray-lighter url(../images/bg-onde-abastecer-home.png) no-repeat;
+	background-size:cover;
+	padding:40px 0;
+	color:#fff;
+	.titulo{
+		margin:0 0 20px 0;
+	}
+}
+
+// ==========================================================================
+// Section Quem Somos
+// ==========================================================================
+
+section.quem-somos{
+	padding:40px 0;
+	.titulo{
+		margin:0 0 20px 0;
+	}
+}
+
+// ==========================================================================
+// Section Notícias
+// ==========================================================================
+
+.ultimas-noticias{
+	h3{
+		font-size:$font-size-large;
+		margin-top:20px;
+	}		
+	.materia:nth-child(n+3) .row-flex{
+		flex-direction:row-reverse;
+	}
+	.btn{
+		margin:50px 0;
+	}
+	.texto{
+		background:$gray-lighter;
+		padding:0 15px;
+		overflow-y:hidden;
+		a{
+			padding-top:10px;
+		}
+		hr{
+			border: solid 1px $gray-dark;
+			padding: 0;
+			width: 100%;
+			margin: 0 0 10px 0;
+		}
+	}
+}
+
+// ==========================================================================
+// Section Vídeos
+// ==========================================================================
+
+section.videos{
+	background:$gray-lighter url(../images/bg-videos.png) no-repeat;
+	background-size:cover;
+}
+
+@media (min-width: $screen-sm-min){
+	.row-flex{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;  
+		-webkit-flex-wrap: wrap; /* Safari */
+		flex-wrap:         wrap;
+		height: auto;
+		&.btn-alinhado{
+			>div{
+				padding-bottom:60px;
+				position:relative;
+			}
+			.btn{
+				position:absolute;
+				bottom:20px;
+				width:calc(100% - 30px);
+			}
+		}
+		> div{  
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: baseline;
+			-webkit-justify-content: baseline;
+			-moz-box-pack: baseline;
+			-ms-flex-pack: baseline;
+			justify-content: baseline;			
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-moz-box-orient: vertical;
+			-moz-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-align-content: stretch; /* Safari */
+			align-content:         stretch;
+		}
+		.well{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;  
+			-moz-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;		
+			-webkit-align-items: stretch; /* Safari */
+			align-items:         stretch;
+			height:100%;
+		}		
+	}
+	.row-flex.row-flex-center{
+    justify-content: center;
+    align-items: center;
+		> div{
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			-moz-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+	}
+}
+
+.btn-outline{
+	border: solid 2px $brand-primary;
+	color: $brand-primary;
+	background: transparent;
+	&:hover,&:focus{
+		background:$brand-primary;
+		color:#fff;
+	}
+}
+
+// ==========================================================================
+// Wrapper
+// ==========================================================================
+#wrapper {}
+
+// ==========================================================================
+// Content
+// ==========================================================================
+#content {}
+
+//
+// Home
+//
+.home {
+	#header{
+		.page-header{
+			background-image:url(../images/banner-home.jpg);
+			border-bottom:solid 2px $brand-primary;
+			position:relative;
+			margin-bottom:70px;
+			.seta{
+				display:block;
+				background:$brand-primary url(../images/seta.png) no-repeat center center;
+				background-size: 44px 18px;
+				width: 72px;
+				height: 42px;
+				border-radius: 0 0 32px 32px;
+				position: absolute;
+				bottom: -43px;
+				left: calc(50% - 24px);
+				background-position: center;
+			}
+			.site-title{
+				color:#fff;
+				font-size:42px;
+				line-height:1.2em;
+				display: block;
+				max-width:600px;
+				margin:120px auto;
+				width:100%;
+				text-transform:uppercase;
+				font-weight:bold;
+			}
+		}
+	}
+	#content {
+		h1.entry-title{
+			text-align:center;
+			margin:20px 0 50px 0;
+		}
+	}
+  .banner-lojas{
+    background: $brand-success-3 url(../images/banner-lojas-mobile-layout.png) no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    .titulo,
+    .descricao{
+      color: #fff;
+    } 
+  }
+}
+
+// ==========================================================================
+// Página NOSSAS LOJAS
+// ==========================================================================
+
+.page-template-tpl-lojas{
+	#header{
+		.page-header{
+			background-image: url(../images/bg-nossas-lojas.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size:cover;
+			.site-title{
+				font-size:48px;
+				font-weight:bold;
+				margin-top:120px;
+				margin-bottom:220px;
+			}
+		}
+	}
+	.loja{
+		text-align:center;
+		.telefone{
+			color:$brand-primary;
+			font-weight:bold;
+		}
+	}	
+}
+
+.btn-outline-cta{
+	background: transparent;
+	color: $gray-dark;
+	border: solid 1px $gray-dark;
+	display: block;
+	text-align: center;
+	&:hover,&:focus{
+		background:$brand-success;
+		color:#fff;
+	}
+}
+.mapa{
+		overflow:hidden;
+    position:relative;
+    height:200px;
+		background:$gray-lighter;
+		background-image:url(../images/sem-mapa.png);
+		background-size:120px;
+		background-position:center;
+		background-repeat:no-repeat;
+		margin-bottom:15px;
+	iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+	}
+}
+
+
+// ==========================================================================
+// Página GNV
+// ==========================================================================
+
+.page-template-tpl-gnv{
+	#header{
+		.page-header{
+			background-image: url(../images/banner-home.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size:cover;
+			.site-title{
+				color: #fff;
+				font-size:48px;
+				font-weight:bold;
+				margin-top:120px;
+				margin-bottom:220px;
+			}
+		}
+	}
+	.menu-fixo-gnv{
+		padding-left:0;
+		position:fixed;
+		z-index:99;
+		top:50px;
+		left:0;
+		list-style:none;
+		li{
+			list-style:none;
+			display:block;
+			margin-bottom:5px;			
+			width:120px;
+			border-radius:0 50px 50px 0;
+			&:nth-child(1){
+				background:$brand-success-2;
+			}
+			&:nth-child(2){
+				background:$brand-success-3;
+			}
+			&:nth-child(3){
+				background:$brand-success-4;
+			}
+			a{
+				font-size:13px;
+				display:block;
+				padding:10px 15px 10px 5px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+	}
+	@media(max-width:$screen-xs-max){
+		.menu-fixo-gnv{
+			li{
+				width:52px;
+			}			
+		}
+	}
+	#content{
+		.titulo{
+			&:before{
+				border-color:$brand-success-3;
+			}
+		}
+		h3,h4{
+			color: $brand-success-3;
+			font-weight: bold;
+			font-size: $font-size-large;
+		}
+		
+		.vantagens{
+			background: url(../images/bg-gnv-vantagens.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size:cover;
+		}
+		.perguntas{
+		}
+		.seguranca{
+			background: url(../images/bg-gnv-seguranca.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size:cover;
+			h3{
+				color: #000;
+				text-align:center;
+			}
+		}
+	}
+}
+
+// ==========================================================================
+// Página Onde Abastecer
+// ==========================================================================
+
+.page-template-tpl-pdv{
+	#header{
+		.page-header{
+			background: url(../images/bg-onde-abastecer.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size:cover;
+			padding:40px 0;
+			color: #fff;
+			h3{
+				color: #fff;
+				text-align:center;
+			}
+		}
+	}
+}
+
+// ==========================================================================
+// Página Orçamento
+// ==========================================================================
+
+.page-id-8{
+	#header{
+		.page-header{
+			.site-title{
+				color:#fff;
+			}
+		}
+	}
+}
+
+
+// ==========================================================================
+// Página Trabalhe Conosco
+// ==========================================================================
+
+.page-id-32{
+	background-image: url(../images/bg-trabalhe-conosco.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	#content{
+		.wpcf7-form{
+			max-width:600px;
+			margin:20px auto 50px auto;
+			input{
+				height:auto;
+				min-height:38px;
+			}
+			.btn{
+				background: $brand-primary;
+				color: #fff;
+				padding:10px 15px;
+				border:none;
+				width:150px;
+				font-size:18px;
+				text-transform:uppercase;
+			}
+		}
+	}
+}
+
+// ==========================================================================
+// Página Fale Conosco
+// ==========================================================================
+
+.page-id-18{
+	background-image: url(../images/bg-fale-conosco.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	#content{
+		.wpcf7-form{
+			max-width:600px;
+			margin:20px auto 50px auto;
+			input{
+				height:auto;
+				min-height:38px;
+			}
+			.btn{
+				background: $brand-primary;
+				color: #fff;
+				padding:10px 15px;
+				border:none;
+				width:150px;
+				font-size:18px;
+				text-transform:uppercase;
+			}
+		}
+	}
+}
+
+// ==========================================================================
+// Página Empresa
+// ==========================================================================
+
+.page-template-tpl-empresa{
+	#header{
+		.page-header{
+			background-image: url(../images/bg-empresa.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			margin-bottom:50px;
+			.site-title{
+				color:#fff;
+				font-size:48px;
+				font-weight:bold;
+				margin-top:120px;
+				margin-bottom:220px;
+			}
+		}
+	}
+	#content{
+		.justificativa{
+			background:$brand-primary url(../images/bg-justificativa.jpg) no-repeat center center;
+			color:#fff;
+			margin-top:70px;
+			padding-bottom:70px;
+			text-align:right;
+			.titulo{
+				color:#fff;
+				&:before{
+					border-color:#fff;
+				}
+			}			
+		}
+		.missao-visao-valores{
+			padding-top:30px;
+			margin-bottom:30px;
+			text-align:center;
+			.col-sm-4{
+				padding-bottom:50px;
+			}
+			@media(min-width:$screen-sm-min){
+				.listras{
+					border-left:solid 1px $gray-light;
+					border-right:solid 1px $gray-light;
+				}
+			}
+		}
+	}
+}
+
+// ==========================================================================
+// Página BLOG
+// ==========================================================================
+
+.blog{
+	#header{
+		.page-header{
+			background-image: url(../images/bg-blog.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			margin-bottom:50px;
+			.site-title{
+				font-size:48px;
+				font-weight:bold;
+				margin-top:120px;
+				margin-bottom:220px;
+			}
+		}
+	}
+	#content{
+		article{
+			margin-bottom:30px;
+			h2{
+				font-size:$font-size-large;
+				margin-top:20px;
+			}		
+			.btn{
+				margin:50px 0;
+			}
+			.texto{
+				background:$gray-lighter;
+				padding:0 15px;
+				overflow-y:hidden;
+				a{
+					padding-top:10px;
+				}
+				hr{
+					border: solid 1px $gray-dark;
+					padding: 0;
+					width: 100%;
+					margin: 0 0 10px 0;
+				}
+			}
+		}
+	}
+	@media(min-width:$screen-sm-min){
+		#sidebar{
+			margin-left: 15px;
+			width: calc(25% - 15px);
+		}
+	}	
+}
+
+// ==========================================================================
+// Single POST
+// ==========================================================================
+
+.single-post{
+	#header{
+		.page-header{
+			background-image: url(../images/bg-blog-interna.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			margin-bottom:50px;
+		}
+	}
+	#content{
+		margin-bottom:30px;
+		.data-postagem{
+			text-align:right;
+			color:$gray-light;
+			hr{
+				border-color:$gray-light;
+			}
+		}
+	}
+}
+
+#searchform{
+	position:relative;
+	.form-control{
+		border: solid 1px $brand-primary;
+		width:100%;
+		padding-right:35px;
+		height:40px;
+		font-size:18px;
+	}
+	.lupa{
+		position:absolute;
+		right:5px;
+		top:5px;
+		background:url(../images/pesquisa.png) no-repeat center;
+		background-size:25px;
+		width: 29px;
+		height:29px;
+		display:block;
+		border:0;
+		&:hover,&:focus{
+			border:solid 1px $brand-primary;
+		}
+	}
+}
+
+// ==========================================================================
+// Sidebar
+// ==========================================================================
+
+@media(min-width:$screen-sm-min){
+	#sidebar {
+		border-left:solid 1px $gray-light;
+		margin-bottom:30px;
+	}
+  .home{
+    .banner-lojas{
+      background-image: url(../images/banner-lojas-layout.png);
+    }
+  }
+}
+@media(max-width:$screen-xs-max){
+  .home{
+    .banner-lojas{
+      background-position: center;
+      .container{
+        padding:0 20px;
+        [class^='col-']{
+          padding:0 10px;
+          .btn{
+            padding: 10px 4px;
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Components
+// ==========================================================================
+
+//
+// Fancy skip link
+//
+// Make it look a bit less "bare bones"
+// Also includes focus suppression for the Chrome tabindex="-1" workaround
+//
+#skippy {
+    display: block;
+    padding: 1em;
+    background-color: #f5f5f5;
+    outline: 0;
+}
+
+#skippy .skiplink-text {
+    padding: .5em;
+    outline: 1px dotted;
+}
+
+#content:focus {
+    outline: none;
+}
+.logo{
+	background:url(../images/logo-inovegas-borda.png) no-repeat;
+	background-size:contain;
+	width:233px;
+	height:92px;
+	display:inline-block;
+}
+.mat{
+	background:url(../images/mat.png) no-repeat;
+	background-size:contain;
+	width:155px;
+	height:35px;
+	display:inline-block;
+}
+.facebook-icone{
+	background:url(../images/facebook-app-logo.png);
+	background-size:contain;
+	width:36px;
+	height:36px;
+	display:inline-block;
+}
+.fizzy{
+	position:relative;
+	top:18px;
+	left:5px;
+	background:url(../images/fizzy.png);
+	background-size:contain;
+	width:62px;
+	height:42px;
+	display:inline-block;
+}
+
+//
+// Pagination
+//
+.pagination-wrap {
+    text-align: center;
+    margin-top: 15px;
+    .infinite-scroll & {
+        display: none;
+    }
+}
+
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+#footer {
+	padding-bottom:20px;
+	color:#fff;
+	text-align:center;
+	background:url(../images/low-contrast-linen-1920x1080.jpg) no-repeat;
+	background-size:cover;
+	p{
+		margin-top:15px;
+	}
+	.list-inline{
+		border-bottom:solid 1px $brand-primary;
+		padding-top:20px;
+		margin-bottom:40px;
+		li{
+			padding-bottom:15px;
+		}
+		a{
+			text-transform:uppercase;			
+			color:#fff;
+			&:hover,&:focus{
+				color:$brand-primary;				
+			}
+		}
+	}
+	text-align:center;
+}
