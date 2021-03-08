@@ -1,9 +1,6 @@
 <?php $formulario_chamada = get_field('formulario_chamada', 'option'); ?>
 <div id="orcamento">
-    
-  <div class="text-center" style="position: relative; top: 30px;">
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"  title="Ir para página inicial"><div class='logo'></div></a>
-  </div>
+
   <h2 class="titulo"><b>Vamos te ajudar a escolher</b><br> o melhor kit gás para o seu carro</h2>
     
   <div id="orcamentoGroup" class="pedido-orcamento">

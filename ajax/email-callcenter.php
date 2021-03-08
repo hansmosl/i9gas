@@ -8,8 +8,11 @@ function emailCallcenter()
     /* Captura telefone, se houver */
     $telefone = sanitize_text_field( $_POST['telefone'] );
     if ( ! $telefone ) {
-      $telefone = '';
-    }  
+      $telefone = 'NÃO INFORMADO';
+    }else{
+      $tel_clean = preg_replace('/\D+/', '', $telefone);
+      $telefone = '55'.$tel_clean;      
+    } 
     /* Captura e-mail do callcenter cadastrado no site */
     $email = get_field( 'email_callcenter', 'option' );
     if($email)

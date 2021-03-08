@@ -44,8 +44,10 @@
 							<p><div class='mat'></div></p>
 							
 							    <ul class='list-inline'>
-							    <li><a href="https://pt-br.facebook.com/inovegasgnv/" class='facebook-icone'><span class='sr-only'>Facebook</span></a></li>
-							    <li><a href="https://www.instagram.com/inovegas/" class='instagram-icone'><span class='sr-only'>Instragram</span></a></li>
+							    <li><a href="https://pt-br.facebook.com/inovegasgnv/" class="facebook-icone" target="_blank"><span class="sr-only">Facebook</span></a></li>
+							    <li><a href="https://www.instagram.com/inovegas/" class="instagram-icone" target="_blank"><span class="sr-only">Instragram</span></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCaNdpLdeiEsh95FgdxVhyHA" class="youtube-icone" target="_blank"><span class="sr-only">IouTube</span></a></li>
+                  <li><a href="https://www.linkedin.com/company/inovegas" class="linkedin-icone" target="_blank"><span class="sr-only">Linkedin</span></a></li>
 							    </ul></p>
 						</div>
 						<div class='col-xs-6 cartoes'>

@@ -9,7 +9,7 @@
     </p>
     <p class="texto">
       <label for="telefone" class="sr-only">Seu telefone</label>
-      <input type="tel" name="telefone" value="" maxlength="11" class="form-control telefone" id="telefone" aria-required="true" aria-invalid="false" aria-describedby="telefoneMensagem" placeholder="Digite seu DDD + Telefone">    
+      <input type="tel" name="telefone" value="" maxlength="15" class="form-control telefone" id="telefone" aria-required="true" aria-invalid="false" aria-describedby="telefoneMensagem" placeholder="Digite seu DDD + Telefone">    
       <span id="telefoneMensagem" class="help-block"></span>
     </p>
     <p id="canalAtendimento">

@@ -170,11 +170,16 @@ function i9gas_theme_settings() {
 							'label' => 'Facebook',
 							'type' => 'text'
 					),
-										array(
+          array(
 							'id' => 'youtube',
 							'label' => 'Youtube',
 							'type' => 'text'
 					),
+          array(
+							'id' => 'instagram',
+							'label' => 'instagram',
+							'type' => 'text'
+					),          
 					array(
 							'id' => 'telefone',
 							'label' => 'Telefone',
@@ -368,7 +373,7 @@ add_action('wp_enqueue_scripts', 'carregar_scripts');
 # Se um formulário tiver o id igual ao abaixo
 # [contact-form-7 id="123" title="Contact form 1"]
 #
-add_action( 'wp_footer', 'mycustom_wp_footer' );
+add_action( 'wp_footer', 'mycustom_wp_footer', 15);
 function mycustom_wp_footer() {
 
   if(is_page(1181)):
@@ -405,7 +410,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 			}
 			ga( 'gtag_UA_69845920_1.send', 'event', 'formulario', 'orcamento-home', loja );
 	}
-}, false );  
+}, false );
 </script>
 <?php
 }
@@ -441,8 +446,8 @@ function inovegas_scripts() {
   wp_enqueue_script( 'main', $template_url . '/assets/js/main.js', array(), null, true );
   
   wp_register_style( 'orcamento-css', $template_url . '/assets/css/orcamento.css', 1, $versao, 'all');
-  //wp_register_script('mask', $template_url . '/assets/js/maskedinput.min.js', array('jquery'), $versao, true);
-  wp_register_script('mascaraTelefone', $template_url . '/assets/js/mascara-telefone.js', array(), $versao, true);
+  wp_register_script('mask', $template_url . '/assets/js/jquery.mask.min.js', array('jquery'), $versao, true);
+  //wp_register_script('mascaraTelefone', $template_url . '/assets/js/mascara-telefone.js', array(), $versao, true);
   wp_register_script('orcamentoAjax', $template_url . '/assets/js/orcamento-ajax.js', array('jquery'), $versao, true);  
   //wp_register_script('orcamento-js', $template_url . '/assets/js/orcamento.js', array('jquery'), $versao, true);
 
@@ -453,8 +458,8 @@ function inovegas_scripts() {
     is_page_template('page-orcamento.php')
   ){
     wp_enqueue_style('orcamento-css');
-    //wp_enqueue_script('mask');
-    wp_enqueue_script('mascaraTelefone');
+    wp_enqueue_script('mask');
+    //wp_enqueue_script('mascaraTelefone');
     wp_enqueue_script('orcamentoAjax');
   }
   
@@ -494,3 +499,22 @@ function single_content_end( $content ) {
     return $content;
 }
 add_filter( 'the_content', 'single_content_end' );
+
+function chamada_zap(){
+	$link = get_field('chamada-zap', 'options');	
+	if($link){
+		$botao = '<a href="'.$link.'" title="Contato via WhatsApp" target="_blank" id="chamada-zap" style="position:fixed;z-index:99;right:1rem;bottom:1rem;"><img src="https://www.inovegas.com.br/site/wp-content/uploads/2021/01/whatsapp-logo.svg" width="45px" height="45px" alt="WhatsApp" /></a>';
+		echo $botao;
+    
+    ?>
+<script>
+(function($){
+  jQuery('#chamada-zap').click( function() {
+    ga( 'gtag_UA_69845920_1.send', 'event', 'whatsapp', 'btn-fixo');
+  });
+})(jQuery);
+</script>
+    <?php
+	}
+}
+add_action( 'wp_footer', 'chamada_zap', 10 );

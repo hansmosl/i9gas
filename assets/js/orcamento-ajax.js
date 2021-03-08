@@ -492,6 +492,7 @@
   })
   
   /*Máscara de telefone*/  
+  /*
   $("input.telefone")
   .mask("(99)9999-9999?9")
   .focusout(function (event) {  
@@ -508,6 +509,23 @@
       {  
         element.mask("(99)9999-9999?9");  
       }  
-  });  
+  });
+  */
+  
+  /* telefone com 9 digitos */
+  var SPMaskBehavior = function (val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  },
+      spOptions = {
+        onKeyPress: function(val, e, field, options) {
+          if(field.val()=="(0"){
+            console.log("NO! No zero to begin.");
+            field.val(field.val().substr(0,1)); // Removes the 0
+          }
+          field.mask(SPMaskBehavior.apply({}, arguments), options);
+        }
+      };
 
+  $("input.telefone").mask(SPMaskBehavior, spOptions);
+  
 })(jQuery);

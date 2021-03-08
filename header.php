@@ -62,6 +62,7 @@
     </h1>
     
     <div class="bg-orcamento">
+      <div class="text-center" style="padding-top:50px;"><div class="logo"></div></div>
       <?php get_template_part('formulario', 'orcamento'); ?>      
 		</div>
     
